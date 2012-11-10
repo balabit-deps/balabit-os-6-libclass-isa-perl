@@ -1,0 +1,22 @@
+Source: libclass-isa-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Dominic Hargreaves <dom@earth.li>,
+           Xavier Guimard <x.guimard@free.fr>
+Section: perl
+Priority: standard
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.4
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libclass-isa-perl.git
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libclass-isa-perl.git
+Homepage: http://search.cpan.org/dist/Class-ISA/
+
+Package: libclass-isa-perl
+Architecture: all
+# Don't add ${perl:Depends} here. Circular dependency, cf. #692885
+Depends: ${misc:Depends}
+Description: report the search path for a class's ISA tree
+ Class::ISA returns the list of classes that the current class inherits
+ from, listed in the order that Perl would search for a method not
+ implemented in the current class. The list contains no duplicates.
+
